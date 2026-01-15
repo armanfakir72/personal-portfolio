@@ -1,0 +1,37 @@
+*{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+header{
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #FFF8F3;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    margin-left: 40px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgba(71, 71, 71, 1);
+    gap: 40px;
+}
+nav ul .btn{
+    padding: 10px 20px;
+    background-color: rgba(253, 110, 10, 1);
+    color: white;
+    border-radius: 5px;font-weight: bold;
+    border: none;
+    margin-left: 20px;
+}
