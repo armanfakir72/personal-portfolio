@@ -1,44 +1,78 @@
+/* ==============================
+   Global Reset & Font Setup
+   ============================== */
 *{
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  margin: 0;
-  padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+/* ==============================
+   Header Section
+   - Light background theme
+   - Decorative background images
+   ============================== */
 header{
     padding-top: 50px;
     background-color: #FFF8F3;
-    background-image: 
-    url(../images/developer.png), 
-    url(../images/header_bg.png);
-    background-repeat: no-repeat , no-repeat;
-    background-position: 
-    top left,
-    bottom right;
+
+    /* Multiple background images */
+    background-image:
+        url("../images/developer.png"),
+        url("../images/header_bg.png");
+
+    background-repeat: no-repeat, no-repeat;
+
+    /* developer image → top-left
+       header background → bottom-right */
+    background-position:
+        top left,
+        bottom right;
+
 
 }
+
+
+/* ==============================
+   Navigation Bar
+   ============================== */
 nav{
     width: 71%;
-    max-width: 1140px;
-    margin: 0px auto;
+    max-width: 1140px;   /* Prevents layout from becoming too wide */
+    margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-bottom: 50px; */
 }
+
+
+/* ==============================
+   Navigation Menu
+   ============================== */
 nav .menu{
     list-style: none;
     display: flex;
-    gap: 30px;
-    text-decoration: none;
+    gap: 30px;           /* Space between menu items */
 }
+
 nav .menu li{
     display: flex;
     align-items: center;
 }
+
 nav .menu li a{
     text-decoration: none;
     color: #000000;
 }
+
+
+/* ==============================
+   Navigation Button (Hire Me)
+   ============================== */
 nav .menu li .btn{
     padding: 10px 20px;
     background-color: #FF7A00;
@@ -48,61 +82,210 @@ nav .menu li .btn{
     cursor: pointer;
     font-size: 16px;
 }
+
+
+/* ==============================
+   Hero / Banner Section Layout
+   ============================== */
 .banner-section{
     display: flex;
     align-items: center;
-    /* border: 1px solid red; */
-    margin: 0 36.5px 0 220px;
     justify-content: space-between;
+
+    /* Custom spacing for desktop design */
+    margin: 0 36.5px 0 220px;
 }
+
+
+/* ==============================
+   Banner Content (Left Side Text)
+   ============================== */
 .banner-section .banner-content{
     width: 585px;
-    /* border: 1px solid blue; */
-    height: 356px;
+    /* height: 356px;   Fixed height for consistent design */
 }
+
+
+/* ==============================
+   Banner Typography
+   ============================== */
 .banner-section .banner-content h3{
     font-size: 45px;
     font-weight: 600;
-    margin-bottom: 5px;
     color: #474747;
+    margin-bottom: 5px;
 }
+
 .banner-section .banner-content h1{
     font-size: 85px;
     font-weight: bold;
     margin-bottom: 20px;
 }
+
 .banner-section .banner-content p{
     font-size: 18px;
     color: #474747;
     line-height: 30px;
     margin-bottom: 30px;
 }
+
+
+/* ==============================
+   Banner Buttons Container
+   ============================== */
 .banner-content .banner-btn{
     display: flex;
     gap: 20px;
 }
+
+
+/* ==============================
+   Primary Button
+   ============================== */
 .banner-section .banner-content .btn{
-    padding: 17px 17px;
+    padding: 17px 25px;
     background-color: #FF7A00;
     color: #FFFFFF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
     font-size: 18px;
     font-weight: bold;
 }
+
+
+/* ==============================
+   Secondary Button (Outline)
+   ============================== */
 .banner-section .banner-content .btn-secondary{
     padding: 19px 25px;
     font-size: 18px;
     font-weight: bold;
-    background-color: var(--page-bg);
-    border:1px solid #FF7A00;
+
+    background-color: transparent;
+    border: 1px solid #FF7A00;
     border-radius: 5px;
     color: #FF7A00;
     cursor: pointer;
 }
+
+
+/* ==============================
+   Banner Image
+   ============================== */
 .banner-image img{
-    height: 576px;
-    max-width: 584px;
+    height: 876px;
+    max-width: 1084px;
+    /* Removes default inline image gap */
     vertical-align: middle;
+}
+
+#about{
+    padding-top: 130px;
+}
+#about .about-container{
+    width: 71%;
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: #FFF8F3;
+    text-align: center;
+    
+}
+/* .section-heading{
+    padding: 131px 157px 0 157px;
+    
+} */
+/* .about-info{
+    display: flex;
+    justify-content: space-around;
+    padding: 131px 157px 0 157px;
+} */
+.need{
+    padding: 131px 157px;
+}
+.section-heading h2{
+    font-size: 35px;
+    font-weight: bold;
+    color: #181818;
+    /* margin-bottom: 30px; */
+}
+.section-heading p{
+    font-size: 18px;
+    color: #757575;
+    line-height: 30px;
+    margin: 30px 0;
+}
+.about-info{
+    display: flex;
+    justify-content: space-around;
+}
+.about-info .card-info p{
+    font-size: 18px;
+    line-height: 30px;
+    color: #757575;
+}
+.about-info .card-info h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+/* skill-section */
+#skill-section{
+    width: 71%;
+    max-width: 1140px;
+    margin: 0 auto;
+    /* border: 1px solid #E0E0E0; */
+    height: 595px;
+    margin-top: 130px;
+}
+/* skill-info experince */
+.skill-info .experince{
+    text-align: center;
+    width: 72%;
+    max-width: 828px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.skill-info .experince h2{
+    font-size: 35px;
+    font-weight: bold;
+    color: #181818;
+    margin-bottom: 30px;
+}
+.skill-info .experince p{
+    font-size: 18px;
+    color: #757575;
+}
+/* skill-name */
+.skill-name{
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.card-skill{
+    height: 377px;
+    max-width: 267px;
+    border: none;
+    border-radius: 5px;
+    box-shadow:0 0 15px rgba(0, 0, 0, 0.15);
+    padding: 30px
+
+}
+.card-skill img{
+    margin-bottom: 30px;
+    max-width: 44px
+}
+.card-skill h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: #181818;
+    margin-bottom: 30px;
+}
+.card-skill p{
+    font-size: 16px;
+    line-height: 28px;
+    color: #757575;
 }
